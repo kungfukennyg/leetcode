@@ -18,7 +18,7 @@ func removeDuplicates(nums []int) int {
 	}
 
 	nums = nums[:j]
-	for i := 0; i < len(nums)-j; i++ {
+	for i := 0; i < cap(nums)-j; i++ {
 		nums = append(nums, -1)
 	}
 	return j

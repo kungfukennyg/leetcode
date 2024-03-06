@@ -1,6 +1,9 @@
 package removeduplicates2
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
 func Test_removeDuplicates(t *testing.T) {
 	type args struct {
@@ -33,6 +36,8 @@ func Test_removeDuplicates(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := removeDuplicates(tt.args.nums); got != tt.want {
 				t.Errorf("removeDuplicates() = %v, want %v", got, tt.want)
+			} else if !reflect.DeepEqual(tt.args.nums, tt.wantNums) {
+				t.Errorf("removeElement() = %v, wantNums %v", tt.args.nums, tt.wantNums)
 			}
 		})
 	}
