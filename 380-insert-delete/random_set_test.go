@@ -1,6 +1,8 @@
 package random_set
 
 import (
+	"fmt"
+	"math/rand"
 	"testing"
 )
 
@@ -74,4 +76,46 @@ func TestRandomizedSetNegatives(t *testing.T) {
 	if r != -1 && r != -2 {
 		t.Fatalf("expected GetRandom to return 2, got %d", r)
 	}
+}
+
+func BenchmarkRandomizedSet_Insert(b *testing.B) {
+	for _, n := range inputSizes {
+		rs := setup(b, n)
+		b.Run(fmt.Sprintf("Insert-%d", n), func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				rs.Insert(i)
+			}
+		})
+	}
+}
+func BenchmarkRandomizedSet_Remove(b *testing.B) {
+	for _, n := range inputSizes {
+		rs := setup(b, n)
+		b.Run(fmt.Sprintf("Remove-%d", n), func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				rs.Remove(i)
+			}
+		})
+	}
+}
+func BenchmarkRandomizedSet_GetRandom(b *testing.B) {
+	for _, n := range inputSizes {
+		rs := setup(b, n)
+		b.Run(fmt.Sprintf("GetRandom-%d", n), func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				rs.GetRandom()
+			}
+		})
+	}
+}
+
+var inputSizes = []int{10, 100, 1000, 10000, 100_000, 1_000_000}
+
+func setup(b *testing.B, n int) *RandomizedSet {
+	b.Helper()
+	rs := Constructor()
+	for i := 0; i < n; i++ {
+		rs.Insert(rand.Int())
+	}
+	return &rs
 }
