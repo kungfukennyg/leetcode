@@ -1,4 +1,4 @@
-package random_set
+package set
 
 import (
 	"fmt"
