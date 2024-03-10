@@ -1,0 +1,10 @@
+goos: linux
+goarch: amd64
+pkg: example.com/leetcode/238-product-of-array
+cpu: 13th Gen Intel(R) Core(TM) i9-13900K
+Benchmark_productExceptSelf/0-32  	49995391	        24.15 ns/op	      80 B/op	       1 allocs/op
+Benchmark_productExceptSelf/1-32  	 6562908	       180.9 ns/op	     896 B/op	       1 allocs/op
+Benchmark_productExceptSelf/2-32  	  727954	      1655 ns/op	    8192 B/op	       1 allocs/op
+Benchmark_productExceptSelf/3-32  	   80584	     15245 ns/op	   81920 B/op	       1 allocs/op
+PASS
+ok  	example.com/leetcode/238-product-of-array	5.213s
