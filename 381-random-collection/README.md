@@ -1,4 +1,4 @@
-381. Insert Delete GetRandom O(1) - Duplicates allowed
+# 381. Insert Delete GetRandom O(1) - Duplicates allowed
 RandomizedCollection is a data structure that contains a collection of numbers, possibly duplicates (i.e., a multiset). It should support inserting and removing specific elements and also reporting a random element.
 
 Implement the RandomizedCollection class:
@@ -13,32 +13,17 @@ Note: The test cases are generated such that getRandom will only be called if th
 
  
 
-Example 1:
+## Example 1:
 
-Input
-["RandomizedCollection", "insert", "insert", "insert", "getRandom", "remove", "getRandom"]
-[[], [1], [1], [2], [], [1], []]
-Output
+Input<p>
+["RandomizedCollection", "insert", "insert", "insert", "getRandom", "remove", "getRandom"]<p>
+[[], [1], [1], [2], [], [1], []]<p>
+Output<p>
 [null, true, false, true, 2, true, 1]
-
-Explanation
-RandomizedCollection randomizedCollection = new RandomizedCollection();
-randomizedCollection.insert(1);   // return true since the collection does not contain 1.
-                                  // Inserts 1 into the collection.
-randomizedCollection.insert(1);   // return false since the collection contains 1.
-                                  // Inserts another 1 into the collection. Collection now contains [1,1].
-randomizedCollection.insert(2);   // return true since the collection does not contain 2.
-                                  // Inserts 2 into the collection. Collection now contains [1,1,2].
-randomizedCollection.getRandom(); // getRandom should:
-                                  // - return 1 with probability 2/3, or
-                                  // - return 2 with probability 1/3.
-randomizedCollection.remove(1);   // return true since the collection contains 1.
-                                  // Removes 1 from the collection. Collection now contains [1,2].
-randomizedCollection.getRandom(); // getRandom should return 1 or 2, both equally likely.
  
 
-Constraints:
+## Constraints:
 
--231 <= val <= 231 - 1
-At most 2 * 105 calls in total will be made to insert, remove, and getRandom.
-There will be at least one element in the data structure when getRandom is called.
+- -231 <= val <= 231 - 1
+- At most 2 * 105 calls in total will be made to insert, remove, and getRandom.
+- There will be at least one element in the data structure when getRandom is called.
