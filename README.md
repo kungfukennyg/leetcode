@@ -4,7 +4,7 @@ LeetCode problems, including solutions and unit tests. Each folder contains a pr
 
 
 ## Notable
-I am particularly proud of my solutions for the following problems. I achieved near 100th percentile in execution time and/or space on these, and have included a copy of the writeups I submitted to leetcode.com. These solutions also contain benchmarks demonstrating their efficacy on high-N inputs where appropriate.
+For the following problems I either achieved near 100th percentile in execution time/space, or found a novel approach beyond the naive solution. I have included a copy of the respective writeups I submitted to leetcode.com. These solutions also contain benchmarks demonstrating their efficacy on various low and High-N inputs where appropriate.
 - [388 - Longest Absolute File Path](388-longest-abs-file-path/writeup.md)
 ![](388-longest-abs-file-path/submission.png)
 
@@ -23,3 +23,5 @@ I am particularly proud of my solutions for the following problems. I achieved n
 
 - [13 - Roman Numerals](13-roman-to-integer/README.md)
 ![](13-roman-to-integer/submission.png)
+
+- [28 - Needle Haystack](28-needle-haystack/README.md)
