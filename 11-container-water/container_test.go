@@ -32,7 +32,6 @@ func Test_maxArea(t *testing.T) {
 	}
 	for i, tt := range tests {
 		t.Run(fmt.Sprint(i), func(t *testing.T) {
-			t.Log("\n" + toString(tt.args.height))
 			if got := maxArea(tt.args.height); got != tt.want {
 				t.Errorf("maxArea() = %v, want %v", got, tt.want)
 			}
