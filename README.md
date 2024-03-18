@@ -21,9 +21,11 @@ For the following problems I either achieved near 100th percentile in execution 
 ![](42-trapping-rain-water/submission.png)
 
 
-- [13 - Roman Numerals](13-roman-to-integer/README.md)
+- [13 - Roman Numerals](13-roman-to-integer/writeup.md)
 ![](13-roman-to-integer/submission.png)
 
-- [28 - Needle Haystack](28-needle-haystack/README.md)
+- [28 - Needle Haystack](28-needle-haystack/writeup.md)
 
-- [68 - Text Justification](68-text-justification/README.md)
+- [68 - Text Justification](68-text-justification/writeup.md)
+
+- [15 - 3 sum](15-3sum/writeup.md)
